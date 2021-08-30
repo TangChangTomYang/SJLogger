@@ -11,19 +11,19 @@
 
 @implementation SJLoggerDiskWriter
 
- 
--(void)writeLogModel2Disk:(SJLoggerModel *)model{
+-(void)writeData:(NSData *)data{
+    if(self.fileHandle == nil || data.length == 0){
+        return ;
+    }
     __weak  typeof(self) weakSelf = self;
     dispatch_async(_queue, ^{
-        if(self.fileHandle == nil || model == nil){
-            return ;
-        }
-        NSData *data = [model toBytes];
-        if (weakSelf.fileHandle && data) {
-            [weakSelf.fileHandle writeData:data];
-        }
-        
+        [weakSelf.fileHandle writeData:data];
     });
+}
+ 
+-(void)writeLog:(SJLoggerModel *)model{
+    NSData *data = [model toBytes];
+    [self writeData:data];
 }
 
 

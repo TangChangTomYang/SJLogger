@@ -11,48 +11,107 @@
 #import "SJLoggerDiskWriter.h"
 
 @interface SJLogger()
+@property (nonatomic, strong) NSString *name;
 @property(nonatomic, strong) SJLoggerDiskWriter *diskWriter;
+
+@property(nonatomic, strong) NSString *openStatusKey;
+@property(nonatomic, strong) NSString *saveLog2DiskKey;
+
+
 @end
 
 @implementation SJLogger
 
-+(BOOL)isOpen{
-    return  [[NSUserDefaults standardUserDefaults] boolForKey:@"SJLogger_isOpen"];
++(instancetype)loggerWithName:(NSString *)name{
+    SJLogger *logger = [[SJLogger alloc] init];
+    logger.level = SJLoggerLevel_Debug;
+    logger.name = name;
+    logger.openStatusKey = [NSString  stringWithFormat:@"%@_isOpen",logger.name];
+    logger.saveLog2DiskKey =  [NSString  stringWithFormat:@"%@_needSaveLog2Dis", logger.name];
+     
+    [logger setOpen:YES];
+    [logger setNeedSaveLog2Disk:YES];
+    logger.diskWriter = [logger ceateDiskWriter];
+    return logger;
+    
 }
 
-+(void)open:(BOOL)status{
-    [[NSUserDefaults standardUserDefaults] setBool:status forKey:@"SJLogger_isOpen"];
+-(NSString *)name{
+    if (!_name) {
+        _name = @"SJLogger";
+    }
+    return _name;
+}
+
+-(BOOL)isOpen{
+    return  [[NSUserDefaults standardUserDefaults] boolForKey:[self openStatusKey]];
+}
+
+-(void)setOpen:(BOOL)status{
+    [[NSUserDefaults standardUserDefaults] setBool:status forKey:[self openStatusKey]];
     [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
-+(BOOL)needSaveLog2Disk{
-    return  [[NSUserDefaults standardUserDefaults] boolForKey:@"SJLogger_needSaveLog2Disk"];
+-(BOOL)isNeedSaveLog2Disk{
+    return  [[NSUserDefaults standardUserDefaults] boolForKey:[self saveLog2DiskKey]];
 }
 
-+(void)saveLog2Disk:(BOOL)saveDisk{
-    [[NSUserDefaults standardUserDefaults] setBool:saveDisk forKey:@"SJLogger_needSaveLog2Disk"];
+-(void)setNeedSaveLog2Disk:(BOOL)saveDisk{
+    [[NSUserDefaults standardUserDefaults] setBool:saveDisk forKey:[self saveLog2DiskKey]];
     [[NSUserDefaults standardUserDefaults] synchronize];
+    
+    if (saveDisk == YES) {
+        [self.diskWriter writeData:[@"----------开始记录磁盘日志------" dataUsingEncoding:NSUTF8StringEncoding]];
+    }
 }
 
 
- 
-+ (SJLogger *)shareInstance {
-    static SJLogger *_loger = nil;
-    static BOOL isFirstCreate = YES;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        _loger = [[SJLogger alloc] init];
-        _loger.diskWriter = [self ceateDiskWriter];
-    });
-    if (isFirstCreate == YES) {
-        isFirstCreate = NO;
-        debugLog(@"==============开始记录日志===========");
+
+
+
+
+
+-(SJLoggerDiskWriter *)ceateDiskWriter{
+    
+    SJLoggerDiskWriter *diskWriter = [[SJLoggerDiskWriter alloc] init];
+    
+    diskWriter.queue = dispatch_queue_create([[NSString stringWithFormat:@"%@_logger_queue", self.name] UTF8String], nil);
+    NSString *cachesDirectory = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory,
+                                                                     NSUserDomainMask, YES) objectAtIndex:0];
+    
+    // dir
+    NSString *cachesLogsDirectory = [cachesDirectory stringByAppendingFormat:@"/logs"];
+    BOOL isDirectory = YES;
+    if ( ![[NSFileManager defaultManager] fileExistsAtPath:cachesLogsDirectory isDirectory:&isDirectory]) {
+        [[NSFileManager defaultManager] createDirectoryAtPath:cachesLogsDirectory  withIntermediateDirectories:YES
+                                                   attributes:nil error:nil];
     }
     
-    return _loger;
+    // dir
+    NSString *subDir = [cachesLogsDirectory stringByAppendingFormat:@"/%@_logs", self.name];
+    if ( ![[NSFileManager defaultManager] fileExistsAtPath:subDir isDirectory:&isDirectory]) {
+        [[NSFileManager defaultManager] createDirectoryAtPath:subDir  withIntermediateDirectories:YES
+                                                   attributes:nil error:nil];
+    }
+    
+    // name
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"yyyy-MM-dd"];
+    NSString *fileName = [NSString stringWithFormat:@"%@.txt",[formatter stringFromDate:[NSDate date]]];
+    NSString *filePath = [subDir stringByAppendingPathComponent:fileName];
+    if (![[NSFileManager defaultManager] fileExistsAtPath:filePath]) {
+       [[NSFileManager defaultManager] createFileAtPath:filePath  contents:nil
+                                             attributes:@{NSFileProtectionKey:NSFileProtectionNone}];
+    }
+    NSFileHandle *fileHandle = [NSFileHandle fileHandleForWritingAtPath:filePath];
+    [fileHandle seekToEndOfFile];
+    diskWriter.fileHandle = fileHandle;
+    
+    
+    return diskWriter;
 }
- 
 
+ 
 
 
 
@@ -63,7 +122,7 @@
               func:(const char *)func
            message:(NSString *)msg {
     
-    if (![SJLogger isOpen]){
+    if (![self isOpen]){
         return;
     }
     
@@ -86,10 +145,12 @@
         else
             [model setThreadName:threadName];
         
+        // 打印控制台
         NSLog(@"%@", model);
         
-        if([SJLogger needSaveLog2Disk]){
-            [self.diskWriter writeLogModel2Disk:model];
+        // 保存日志到磁盘
+        if([self isNeedSaveLog2Disk]){
+            [self.diskWriter writeLog:model];
         }
          
     }
@@ -97,9 +158,9 @@
 
 
 
-+(void)debug:(const char *)file line:(int)line func:(const char *)func format:(NSString *)format,...{
+-(void)debug:(const char *)file line:(int)line func:(const char *)func format:(NSString *)format,...{
     
-    if (![SJLogger isOpen]){
+    if (![self isOpen]){
         return;
     }
     va_list params;
@@ -107,71 +168,47 @@
     NSString *msg = [[NSString alloc] initWithFormat:format arguments:params];
     va_end(params);
     
-    [[SJLogger shareInstance] executeLog:SJLoggerLevel_Debug exception:nil file:file line:line func:func message:msg];
+    [self executeLog:SJLoggerLevel_Debug exception:nil file:file line:line func:func message:msg];
     
 }
 
-+(void)info:(const char *)file line:(int)line func:(const char *)func format:(NSString *)format,...{
+-(void)info:(const char *)file line:(int)line func:(const char *)func format:(NSString *)format,...{
     
-    if (![SJLogger isOpen]){
+    if (![self isOpen]){
         return;
     }
     va_list params;
     va_start(params, format);
     NSString *msg = [[NSString alloc] initWithFormat:format arguments:params];
     va_end(params);
-    [[SJLogger shareInstance] executeLog:SJLoggerLevel_Info exception:nil file:file line:line func:func message:msg];
+    [self executeLog:SJLoggerLevel_Info exception:nil file:file line:line func:func message:msg];
 }
 
-+(void)warn:(const char *)file line:(int)line func:(const char *)func format:(NSString *)format,...{
-    if (![SJLogger isOpen]){
+-(void)warn:(const char *)file line:(int)line func:(const char *)func format:(NSString *)format,...{
+    if (![self isOpen]){
         return;
     }
     va_list params;
     va_start(params, format);
     NSString *msg = [[NSString alloc] initWithFormat:format arguments:params];
     va_end(params);
-    [[SJLogger shareInstance] executeLog:SJLoggerLevel_Warn exception:nil file:file line:line func:func message:msg];
+    [self executeLog:SJLoggerLevel_Warn exception:nil file:file line:line func:func message:msg];
 }
 
-+(void)error:(const char *)file line:(int)line func:(const char *)func exception:(NSException *)ex format:(NSString *)format,...{
+-(void)error:(const char *)file line:(int)line func:(const char *)func exception:(NSException *)ex format:(NSString *)format,...{
     
-    if (![SJLogger isOpen]){
+    if (![self isOpen]){
         return;
     }
     va_list params;
     va_start(params, format);
     NSString *msg = [[NSString alloc] initWithFormat:format arguments:params];
     va_end(params);
-    [[SJLogger shareInstance] executeLog:SJLoggerLevel_Error exception:nil file:file line:line func:func message:msg];
+    [self executeLog:SJLoggerLevel_Error exception:nil file:file line:line func:func message:msg];
     
 }
 
 
-+(SJLoggerDiskWriter *)ceateDiskWriter{
-    SJLoggerDiskWriter *diskWriter = [[SJLoggerDiskWriter alloc] init];
-    diskWriter.queue = dispatch_queue_create("SJLogger_diskWriter_Queue", nil);
-    diskWriter.fileHandle = [self createDiskFileHandle];
-    return diskWriter;
-}
-
-+(NSFileHandle *)createDiskFileHandle{
-    NSString *dir = [NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES) objectAtIndex:0];
-    NSString *diskDirectory = [dir stringByAppendingFormat:@"/%@", @"logs"];
-    [[NSFileManager defaultManager] createDirectoryAtPath:diskDirectory  withIntermediateDirectories:YES
-                                                attributes:nil error:nil];
-    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    [formatter setDateFormat:@"yyyy-MM-dd"];
-    NSString *time = [formatter stringFromDate:[NSDate date]];
-    NSString *filePath = [diskDirectory stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.txt",time]];
-    if (![[NSFileManager defaultManager] fileExistsAtPath:filePath]) {
-        [[NSFileManager defaultManager] createFileAtPath:filePath  contents:nil
-                                              attributes:@{NSFileProtectionKey:NSFileProtectionNone}];
-     }
-    NSFileHandle *fileHandle = [NSFileHandle fileHandleForWritingAtPath:filePath];
-    [fileHandle seekToEndOfFile];
-    return fileHandle;
-}
 
 
 @end

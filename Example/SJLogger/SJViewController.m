@@ -8,9 +8,7 @@
 
 #import "SJViewController.h"
 
-//#import "SJLogger.h"
-#import "SJLogger.h"
-
+#import "SJLoggerManager.h"
 
 @interface SJViewController ()
 
@@ -21,15 +19,24 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    [SJLogger open:YES];
-    [SJLogger saveLog2Disk:YES];
+     
     
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-//    debugLog(@"1");
+    debugLog(@"hello");
+    debugNameLog(@"cin", @"hello world");
+    
+    static int i = 0;
+    ++i;
+    
+    if (i >= 5) {
+        [SJLoggerManager setLoggerOpen:NO ofName:nil];
+        [SJLoggerManager setLoggerOpen:NO ofName:@"cin"];
+    }
+    
+    
 }
 
 @end

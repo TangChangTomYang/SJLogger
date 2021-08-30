@@ -13,7 +13,7 @@ typedef enum{
     SJLoggerLevel_Debug     = 0,
     SJLoggerLevel_Info      = 2,
     SJLoggerLevel_Warn      = 4,
-    SJLoggerLevel_Error     = 8
+    SJLoggerLevel_Error     = 8   // 最高级别
 }SJLoggerLevel;
 
 

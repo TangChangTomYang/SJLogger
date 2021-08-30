@@ -16,7 +16,8 @@
 @property(nonatomic, strong)NSFileHandle *fileHandle;
 
 
--(void)writeLogModel2Disk:(SJLoggerModel *)model;
+-(void)writeLog:(SJLoggerModel *)model;
+-(void)writeData:(NSData *)data;
 
 @end
 
