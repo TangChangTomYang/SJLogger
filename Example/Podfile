@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '9.0'
+
+target 'SJLogger_Example' do
+  pod 'SJLogger', :path => '../'
+
+  target 'SJLogger_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
