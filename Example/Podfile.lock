@@ -1,0 +1,16 @@
+PODS:
+  - SJLogger (0.1.0)
+
+DEPENDENCIES:
+  - SJLogger (from `../`)
+
+EXTERNAL SOURCES:
+  SJLogger:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  SJLogger: 62363d9014e882cc5453959f91190480b2bf1db9
+
+PODFILE CHECKSUM: 3a39c33cb564ef0ea3fa1f39c2bf4d9cec3a26d5
+
+COCOAPODS: 1.10.2

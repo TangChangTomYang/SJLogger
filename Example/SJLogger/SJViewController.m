@@ -8,6 +8,10 @@
 
 #import "SJViewController.h"
 
+//#import "SJLogger.h"
+#import "SJLogger.h"
+
+
 @interface SJViewController ()
 
 @end
@@ -17,13 +21,15 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    [SJLogger open:YES];
+    [SJLogger saveLog2Disk:YES];
+    
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+//    debugLog(@"1");
 }
 
 @end

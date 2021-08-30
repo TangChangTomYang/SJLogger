@@ -1,0 +1,6 @@
+framework module SJLogger {
+  umbrella header "SJLogger-umbrella.h"
+
+  export *
+  module * { export * }
+}

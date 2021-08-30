@@ -1,0 +1,663 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0EF9D1E9E71F54BFFD056201DDEEA797 /* SJLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 91E858DE3389490E6B6E5BAD291DB0F5 /* SJLogger.m */; };
+		15ACF9BB90500E3EB1A0A0F7A75350F4 /* SJLoggerDefine.h in Headers */ = {isa = PBXBuildFile; fileRef = 6222A742C17D5C69C060758867261524 /* SJLoggerDefine.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		16FCBE592367C49ACE03D006DD93DDAA /* SJLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BCDEAD5E06ACB1476C1574C08914EED /* SJLogger.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		3D81D0A212090915E6B18121D81C1722 /* SJLogger-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C5B911D88FA81019A584DD5A8BCAF90 /* SJLogger-dummy.m */; };
+		5A07DAAA1D28CD7F177AE9DB549A991A /* SJLoggerDiskWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD0A6307094A0F251A2631A4FD30F26 /* SJLoggerDiskWriter.m */; };
+		652596DA2F7CB926CA4E8F4A790B6473 /* Pods-SJLogger_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B44FDFE55A115F561D0A52C2030FCC0B /* Pods-SJLogger_Example-dummy.m */; };
+		94CE48CA54DE8AD35A49F346D74E59EC /* SJLoggerDiskWriter.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A8DF9E76407EE6EA65D2B99AC73CCEC /* SJLoggerDiskWriter.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		9CFF4E4235522D7D8A17CBC82BC2904A /* SJLoggerModel.h in Headers */ = {isa = PBXBuildFile; fileRef = D04C793AF9E8F28A571F1E192BD0C94F /* SJLoggerModel.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		C13DBAD4C1C35E910C8FBC524A2D272C /* Pods-SJLogger_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E50BD4A4446E4CF6CDB23AEC355814 /* Pods-SJLogger_Tests-dummy.m */; };
+		FA1AB67513F5A0E1479C65E73238C24E /* SJLoggerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F4FDC392A73ECD943B16BBC241A6823C /* SJLoggerModel.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		325F126C3DAA7AD2944B01A8F7669A3E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C3628E2E076D732058190920BF55806D;
+			remoteInfo = SJLogger;
+		};
+		A305678940B50D75C7BAAF625C36D66C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BB9EA8634C1EC1B77FD4F42D4CA6D38A;
+			remoteInfo = "Pods-SJLogger_Example";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		08FDA108AE8A35DA5844C2978AE60433 /* Pods-SJLogger_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SJLogger_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		0BCDEAD5E06ACB1476C1574C08914EED /* SJLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SJLogger.h; path = SJLogger/Classes/SJLogger.h; sourceTree = "<group>"; };
+		13A081908821EC42F6D638E193AFEAE0 /* libSJLogger.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libSJLogger.a; path = libSJLogger.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		191CF92C89C16B3C7D22272271A1F2FF /* SJLogger.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = SJLogger.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		1AD0A6307094A0F251A2631A4FD30F26 /* SJLoggerDiskWriter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SJLoggerDiskWriter.m; path = SJLogger/Classes/SJLoggerDiskWriter.m; sourceTree = "<group>"; };
+		25E4202BB2442F81EBF1D54C26371862 /* SJLogger.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SJLogger.release.xcconfig; sourceTree = "<group>"; };
+		4013A6751F2D919684A9C3482246C865 /* Pods-SJLogger_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SJLogger_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		4C5B911D88FA81019A584DD5A8BCAF90 /* SJLogger-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SJLogger-dummy.m"; sourceTree = "<group>"; };
+		53DDB8A6DF757EF091492B535CFC9D42 /* SJLogger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SJLogger.debug.xcconfig; sourceTree = "<group>"; };
+		5995FBA5190493CE6057F70177CC258D /* Pods-SJLogger_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SJLogger_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		6222A742C17D5C69C060758867261524 /* SJLoggerDefine.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SJLoggerDefine.h; path = SJLogger/Classes/SJLoggerDefine.h; sourceTree = "<group>"; };
+		686BA2569F89ABAB6A0454EC1A7CD400 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		81B5839BA93575CC8D2A4CDFB154FF28 /* Pods-SJLogger_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SJLogger_Example.release.xcconfig"; sourceTree = "<group>"; };
+		84E50BD4A4446E4CF6CDB23AEC355814 /* Pods-SJLogger_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SJLogger_Tests-dummy.m"; sourceTree = "<group>"; };
+		91E858DE3389490E6B6E5BAD291DB0F5 /* SJLogger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SJLogger.m; path = SJLogger/Classes/SJLogger.m; sourceTree = "<group>"; };
+		92A6E1B7559E4DE862D598F3A779887D /* Pods-SJLogger_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SJLogger_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		961CC801777ACC7EF52DF6134D7F105B /* Pods-SJLogger_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SJLogger_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		9A8DF9E76407EE6EA65D2B99AC73CCEC /* SJLoggerDiskWriter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SJLoggerDiskWriter.h; path = SJLogger/Classes/SJLoggerDiskWriter.h; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		ABCB427CDC1A15D654E4DFCFB135633A /* SJLogger-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SJLogger-prefix.pch"; sourceTree = "<group>"; };
+		AC11103DE1565CD1FFE500BE463890A3 /* libPods-SJLogger_Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-SJLogger_Tests.a"; path = "libPods-SJLogger_Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B44FDFE55A115F561D0A52C2030FCC0B /* Pods-SJLogger_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SJLogger_Example-dummy.m"; sourceTree = "<group>"; };
+		BCC2E8C819CE1266CC0F132B75D78ADA /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		C56EF7094461BACF24833C181352CA2A /* libPods-SJLogger_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-SJLogger_Example.a"; path = "libPods-SJLogger_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D04C793AF9E8F28A571F1E192BD0C94F /* SJLoggerModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SJLoggerModel.h; path = SJLogger/Classes/SJLoggerModel.h; sourceTree = "<group>"; };
+		D0531EAD1F1C30B80539820827570120 /* Pods-SJLogger_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SJLogger_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		DD1641F21C72887FE9CE71CF588429A5 /* Pods-SJLogger_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SJLogger_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		F4FDC392A73ECD943B16BBC241A6823C /* SJLoggerModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SJLoggerModel.m; path = SJLogger/Classes/SJLoggerModel.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9B5FA6B4724B684F5777CED9B06D97A7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C94EBC826D131C10E2C42B421E242718 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EB36EA30DEE8CE4751E2A2E2DFE81653 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0821E2F833BC7E9329649E763229C54A /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				561BF71253A79E12965AC84CA0E01E47 /* Pods-SJLogger_Example */,
+				B36B61A285DE44C3E7C9598ED157ADC0 /* Pods-SJLogger_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		561BF71253A79E12965AC84CA0E01E47 /* Pods-SJLogger_Example */ = {
+			isa = PBXGroup;
+			children = (
+				4013A6751F2D919684A9C3482246C865 /* Pods-SJLogger_Example-acknowledgements.markdown */,
+				92A6E1B7559E4DE862D598F3A779887D /* Pods-SJLogger_Example-acknowledgements.plist */,
+				B44FDFE55A115F561D0A52C2030FCC0B /* Pods-SJLogger_Example-dummy.m */,
+				5995FBA5190493CE6057F70177CC258D /* Pods-SJLogger_Example.debug.xcconfig */,
+				81B5839BA93575CC8D2A4CDFB154FF28 /* Pods-SJLogger_Example.release.xcconfig */,
+			);
+			name = "Pods-SJLogger_Example";
+			path = "Target Support Files/Pods-SJLogger_Example";
+			sourceTree = "<group>";
+		};
+		86ED6B08962AD799F27E8CBAAEC8A7D1 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				686BA2569F89ABAB6A0454EC1A7CD400 /* LICENSE */,
+				BCC2E8C819CE1266CC0F132B75D78ADA /* README.md */,
+				191CF92C89C16B3C7D22272271A1F2FF /* SJLogger.podspec */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		9133E97D388C5FD6B2D0AFBADEDA3393 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B902CB709BFA791123744CEC2DA77B41 /* SJLogger */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		B36B61A285DE44C3E7C9598ED157ADC0 /* Pods-SJLogger_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				08FDA108AE8A35DA5844C2978AE60433 /* Pods-SJLogger_Tests-acknowledgements.markdown */,
+				DD1641F21C72887FE9CE71CF588429A5 /* Pods-SJLogger_Tests-acknowledgements.plist */,
+				84E50BD4A4446E4CF6CDB23AEC355814 /* Pods-SJLogger_Tests-dummy.m */,
+				961CC801777ACC7EF52DF6134D7F105B /* Pods-SJLogger_Tests.debug.xcconfig */,
+				D0531EAD1F1C30B80539820827570120 /* Pods-SJLogger_Tests.release.xcconfig */,
+			);
+			name = "Pods-SJLogger_Tests";
+			path = "Target Support Files/Pods-SJLogger_Tests";
+			sourceTree = "<group>";
+		};
+		B902CB709BFA791123744CEC2DA77B41 /* SJLogger */ = {
+			isa = PBXGroup;
+			children = (
+				0BCDEAD5E06ACB1476C1574C08914EED /* SJLogger.h */,
+				91E858DE3389490E6B6E5BAD291DB0F5 /* SJLogger.m */,
+				6222A742C17D5C69C060758867261524 /* SJLoggerDefine.h */,
+				9A8DF9E76407EE6EA65D2B99AC73CCEC /* SJLoggerDiskWriter.h */,
+				1AD0A6307094A0F251A2631A4FD30F26 /* SJLoggerDiskWriter.m */,
+				D04C793AF9E8F28A571F1E192BD0C94F /* SJLoggerModel.h */,
+				F4FDC392A73ECD943B16BBC241A6823C /* SJLoggerModel.m */,
+				86ED6B08962AD799F27E8CBAAEC8A7D1 /* Pod */,
+				BFD98FED41031109750DB438760DF158 /* Support Files */,
+			);
+			name = SJLogger;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		BFD98FED41031109750DB438760DF158 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				4C5B911D88FA81019A584DD5A8BCAF90 /* SJLogger-dummy.m */,
+				ABCB427CDC1A15D654E4DFCFB135633A /* SJLogger-prefix.pch */,
+				53DDB8A6DF757EF091492B535CFC9D42 /* SJLogger.debug.xcconfig */,
+				25E4202BB2442F81EBF1D54C26371862 /* SJLogger.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/SJLogger";
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				9133E97D388C5FD6B2D0AFBADEDA3393 /* Development Pods */,
+				D89477F20FB1DE18A04690586D7808C4 /* Frameworks */,
+				D2470759B5AA0800EB5EEFD13184641F /* Products */,
+				0821E2F833BC7E9329649E763229C54A /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D2470759B5AA0800EB5EEFD13184641F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C56EF7094461BACF24833C181352CA2A /* libPods-SJLogger_Example.a */,
+				AC11103DE1565CD1FFE500BE463890A3 /* libPods-SJLogger_Tests.a */,
+				13A081908821EC42F6D638E193AFEAE0 /* libSJLogger.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D89477F20FB1DE18A04690586D7808C4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		0A7D0F1655602363EB2FD2F1CCE16F0C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3F859AA639A223A301AF41F0CB632A22 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16FCBE592367C49ACE03D006DD93DDAA /* SJLogger.h in Headers */,
+				15ACF9BB90500E3EB1A0A0F7A75350F4 /* SJLoggerDefine.h in Headers */,
+				94CE48CA54DE8AD35A49F346D74E59EC /* SJLoggerDiskWriter.h in Headers */,
+				9CFF4E4235522D7D8A17CBC82BC2904A /* SJLoggerModel.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		54F949DC0D8ABA620B1B76D9D8B5E013 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		260A00BDD432D7BE95CC2E04252D09F8 /* Pods-SJLogger_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 317680615F8A9D2BB7EE3F0C1759829A /* Build configuration list for PBXNativeTarget "Pods-SJLogger_Tests" */;
+			buildPhases = (
+				54F949DC0D8ABA620B1B76D9D8B5E013 /* Headers */,
+				1034F89334F7779AEFFB8998A720ED95 /* Sources */,
+				9B5FA6B4724B684F5777CED9B06D97A7 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7F11EA019853B049B8B3769C5568BFE9 /* PBXTargetDependency */,
+			);
+			name = "Pods-SJLogger_Tests";
+			productName = "Pods-SJLogger_Tests";
+			productReference = AC11103DE1565CD1FFE500BE463890A3 /* libPods-SJLogger_Tests.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		BB9EA8634C1EC1B77FD4F42D4CA6D38A /* Pods-SJLogger_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F202E7101A7C1C9258DFDC99182BF186 /* Build configuration list for PBXNativeTarget "Pods-SJLogger_Example" */;
+			buildPhases = (
+				0A7D0F1655602363EB2FD2F1CCE16F0C /* Headers */,
+				CD76EDF29797FCE9687F1021E42F2CE5 /* Sources */,
+				C94EBC826D131C10E2C42B421E242718 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4B82B2313DCA7DE5BDB5363370CB28F2 /* PBXTargetDependency */,
+			);
+			name = "Pods-SJLogger_Example";
+			productName = "Pods-SJLogger_Example";
+			productReference = C56EF7094461BACF24833C181352CA2A /* libPods-SJLogger_Example.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		C3628E2E076D732058190920BF55806D /* SJLogger */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F323C1C507ADA9C07A765000B8CFBD59 /* Build configuration list for PBXNativeTarget "SJLogger" */;
+			buildPhases = (
+				3F859AA639A223A301AF41F0CB632A22 /* Headers */,
+				20E2D73639C299F2BCFF0389197D4D43 /* Sources */,
+				EB36EA30DEE8CE4751E2A2E2DFE81653 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SJLogger;
+			productName = SJLogger;
+			productReference = 13A081908821EC42F6D638E193AFEAE0 /* libSJLogger.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = D2470759B5AA0800EB5EEFD13184641F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BB9EA8634C1EC1B77FD4F42D4CA6D38A /* Pods-SJLogger_Example */,
+				260A00BDD432D7BE95CC2E04252D09F8 /* Pods-SJLogger_Tests */,
+				C3628E2E076D732058190920BF55806D /* SJLogger */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1034F89334F7779AEFFB8998A720ED95 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C13DBAD4C1C35E910C8FBC524A2D272C /* Pods-SJLogger_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		20E2D73639C299F2BCFF0389197D4D43 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0EF9D1E9E71F54BFFD056201DDEEA797 /* SJLogger.m in Sources */,
+				3D81D0A212090915E6B18121D81C1722 /* SJLogger-dummy.m in Sources */,
+				5A07DAAA1D28CD7F177AE9DB549A991A /* SJLoggerDiskWriter.m in Sources */,
+				FA1AB67513F5A0E1479C65E73238C24E /* SJLoggerModel.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD76EDF29797FCE9687F1021E42F2CE5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				652596DA2F7CB926CA4E8F4A790B6473 /* Pods-SJLogger_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4B82B2313DCA7DE5BDB5363370CB28F2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SJLogger;
+			target = C3628E2E076D732058190920BF55806D /* SJLogger */;
+			targetProxy = 325F126C3DAA7AD2944B01A8F7669A3E /* PBXContainerItemProxy */;
+		};
+		7F11EA019853B049B8B3769C5568BFE9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-SJLogger_Example";
+			target = BB9EA8634C1EC1B77FD4F42D4CA6D38A /* Pods-SJLogger_Example */;
+			targetProxy = A305678940B50D75C7BAAF625C36D66C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		18E223B1539E1701F54CBA1ABB665124 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5995FBA5190493CE6057F70177CC258D /* Pods-SJLogger_Example.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		25AD9454612BF454A1E3DC4CD4FA8C6D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		6F7FC8CF892B3D6008F8F3F090A191DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 53DDB8A6DF757EF091492B535CFC9D42 /* SJLogger.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/SJLogger/SJLogger-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = SJLogger;
+				PRODUCT_NAME = SJLogger;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B4097B8FE7B53C42339F81E6D481E47C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D0531EAD1F1C30B80539820827570120 /* Pods-SJLogger_Tests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CA547D2C7E9A8A153DC2B27FBE00B112 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		DF5A549B8F32E45940F7D62C61CB0FBD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 25E4202BB2442F81EBF1D54C26371862 /* SJLogger.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/SJLogger/SJLogger-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = SJLogger;
+				PRODUCT_NAME = SJLogger;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F93BE3DE6D1C981EDBCC9618EC7EE54D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 961CC801777ACC7EF52DF6134D7F105B /* Pods-SJLogger_Tests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FB6CBDEABAE40034C9E40C99ECAD50F5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 81B5839BA93575CC8D2A4CDFB154FF28 /* Pods-SJLogger_Example.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		317680615F8A9D2BB7EE3F0C1759829A /* Build configuration list for PBXNativeTarget "Pods-SJLogger_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F93BE3DE6D1C981EDBCC9618EC7EE54D /* Debug */,
+				B4097B8FE7B53C42339F81E6D481E47C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				25AD9454612BF454A1E3DC4CD4FA8C6D /* Debug */,
+				CA547D2C7E9A8A153DC2B27FBE00B112 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F202E7101A7C1C9258DFDC99182BF186 /* Build configuration list for PBXNativeTarget "Pods-SJLogger_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18E223B1539E1701F54CBA1ABB665124 /* Debug */,
+				FB6CBDEABAE40034C9E40C99ECAD50F5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F323C1C507ADA9C07A765000B8CFBD59 /* Build configuration list for PBXNativeTarget "SJLogger" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6F7FC8CF892B3D6008F8F3F090A191DC /* Debug */,
+				DF5A549B8F32E45940F7D62C61CB0FBD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

@@ -1,0 +1,22 @@
+{
+  "name": "SJLogger",
+  "version": "0.1.0",
+  "summary": "SJLogger summary",
+  "description": "SJLogger detail description",
+  "homepage": "https://github.com/TangChangTomYang/SJLogger.git",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "tom": "3588710396@qq.com"
+  },
+  "source": {
+    "git": "",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "source_files": "SJLogger/Classes/**/*"
+}
